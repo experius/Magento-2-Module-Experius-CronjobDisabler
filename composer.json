@@ -1,0 +1,25 @@
+{
+    "name": "experius/module-cronjobdisabler",
+    "description": "",
+    "license": "proprietary",
+    "authors": [
+        {
+            "email": "info@mage2gen.com",
+            "name": "Mage2Gen"
+        },
+        {
+            "email": "derrick@experius.nl",
+            "name": "Derrick Heesbeen"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Experius\\CronjobDisabler\\": ""
+        },
+        "files": [
+            "registration.php"
+        ]
+    }
+}

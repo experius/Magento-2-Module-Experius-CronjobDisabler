@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+	<system>
+		<section id="system" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+			<label>cron</label>
+			<tab>system</tab>
+			<resource>Experius_CronjobDisabler::config_experius_cronjobdisabler</resource>
+			<group id="cronjob_disabler" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+				<label>Cron (Disabler)</label>
+				<field id="jobs" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="multiselect">
+					<label>Jobs</label>
+					<comment>Select the group value to disable a complete cron group</comment>
+					<source_model>Experius\CronjobDisabler\Model\Config\Source\Jobs</source_model>
+				</field>
+			</group>
+		</section>
+	</system>
+</config>
