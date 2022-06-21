@@ -59,9 +59,8 @@ class Config
 
         $filteredCronjobs = [];
         foreach ($result as $groupName => $jobs) {
-            $options[] = ['value' => 'group_' . $groupName, 'label' => 'group ' . $groupName];
-
             if (!in_array('group_' . $groupName, $disabledGroups)) {
+                // @SuppressWarnings(PHPMD.UnusedLocalVariable)
                 foreach ($jobs as $jobName => $job) {
                     if (in_array($groupName . '_' . $jobName, $disabledGroups)) {
                         unset($jobs[$jobName]);
