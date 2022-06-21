@@ -42,6 +42,7 @@ class Config
      * @param \Magento\Cron\Model\Config $subject
      * @param $result
      * @return array
+     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function afterGetJobs(
         \Magento\Cron\Model\Config $subject,
