@@ -43,6 +43,7 @@ class Config
      * @param $result
      * @return array
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
+     * @SuppressWarnings(PHPMD.UnusedLocalVariable) $job in foreach
      */
     public function afterGetJobs(
         \Magento\Cron\Model\Config $subject,
@@ -60,7 +61,6 @@ class Config
         $filteredCronjobs = [];
         foreach ($result as $groupName => $jobs) {
             if (!in_array('group_' . $groupName, $disabledGroups)) {
-                // @SuppressWarnings(PHPMD.UnusedLocalVariable)
                 foreach ($jobs as $jobName => $job) {
                     if (in_array($groupName . '_' . $jobName, $disabledGroups)) {
                         unset($jobs[$jobName]);
